@@ -8,18 +8,29 @@ To write a program to find the LU Decomposition of a matrix.
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
 ## Algorithm
-### Step 1:  
-Import required libraries `numpy` and `scipy.linalg`.  
+### Step 1: Start the Program
 
-### Step 2:  
-Input the matrix/matrices using `eval(input())`.  
+### Step 2: numpy for matrix creation and handling.
 
-### Step 3:  
-Perform LU decomposition using `lu()` or solve equations using `lu_factor()` and `lu_solve()`.  
+### Step 3: scipy.linalg.lu for LU decomposition.
 
-### Step 4:  
-Print the results `L` and `U` matrices or solution `X` matrix.  
+### Step 4: Input the Matrix
 
+### Step 5: Take the square matrix A as input.
+
+### Step 6: Use eval(input()) to allow entry in Python list format (e.g., [[2,3],[4,5]]).
+
+### Step 7: Use lu(A) from SciPy which returns:
+
+P: Permutation matrix (accounting for row swaps),
+
+L: Lower triangular matrix with 1s on the diagonal,
+
+U: Upper triangular matrix.
+
+### Step 8: Print the Lower triangular matrix (L).
+
+### Step 9: Print the Upper triangular matrix (U).
 ## Program:
 (i) To find the L and U matrix
 ```python
@@ -36,7 +47,28 @@ print(L)
 print(U) 
 
 ```
-(ii) To find the LU Decomposition of a matrix
+## (ii) To find the LU Decomposition of a matrix
+## Algorithm
+
+### Step 1: Start the Program
+
+### Step 2: numpy for matrix input and handling.
+
+### Step 3: lu_factor and lu_solve from scipy.linalg for LU decomposition and solving.
+
+### Step 4: Input the coefficient matrix A (square matrix).
+
+### Step 5: Input the right-hand side vector or matrix B.
+
+### Step 6: Use lu_factor(A) to compute:
+
+LU: combined LU decomposition matrix,
+
+PV: pivot indices for row permutations.
+
+### Step 7: Use lu_solve((PV, LU), B) to solve the system Ax = B.
+
+### Step 8: Output the result vector x which solves Ax = B.
 ```python
 
 '''Program to solve a matrix using LU decomposition.
